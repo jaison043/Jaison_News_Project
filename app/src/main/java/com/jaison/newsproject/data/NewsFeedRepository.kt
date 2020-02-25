@@ -26,7 +26,7 @@ class NewsFeedRepository(val app: Application) {
             callNewsService()
         }
 
-        Log.i(LOG_TAG, "Network Available ${networkAvailable()}")
+        //Log.i(LOG_TAG, "Network Available ${networkAvailable()}")
     }
 
     @WorkerThread
