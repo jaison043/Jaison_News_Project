@@ -10,6 +10,7 @@ Features
 4) Retrofit for webservice calls
 5) Moshi for json parsing
 6) Android X libraries for for navigation,lifecycle etc
+7) Glide for image loading
 
 Screen Shots
 
