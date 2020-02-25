@@ -1,6 +1,7 @@
 package com.jaison.newsproject.ui.main
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.jaison.newsproject.LOG_TAG
 import com.jaison.newsproject.R
 import com.jaison.newsproject.data.ArticleItem
 import com.jaison.newsproject.data.NewsFeed
@@ -48,8 +50,10 @@ class NewsRecyclerAdapter(
                 it.text = newsitem.description
             }
             author?.let {
-                author.visibility = View.VISIBLE
                 it.text = newsitem.author
+            }
+            newsitem.author.let {
+                author.visibility=View.VISIBLE
             }
 
             newsImage?.let {
@@ -62,6 +66,7 @@ class NewsRecyclerAdapter(
         }
 
     }
+
 
 
     interface NewsItemListener {
